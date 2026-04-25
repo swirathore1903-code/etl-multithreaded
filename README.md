@@ -1,31 +1,91 @@
 
 # Multi-Threaded ETL Pipeline 🚀
 
-## Overview
-This project implements an ETL (Extract, Transform, Load) pipeline using Python with multi-threading.
+## 📌 Overview
 
-## Features
-- Multi-threaded processing
-- Uses queues for safe data sharing
-- Performance benchmarking
-- Graph visualization
+This project implements a **multi-threaded ETL (Extract, Transform, Load) pipeline** in Python using a producer-consumer architecture. It processes data in parallel, applies transformations, and stores results in a structured format using SQLite.
 
-## Tech Stack
-- Python
-- Pandas
-- Matplotlib
+---
 
-## How to Run
-pip install pandas matplotlib  
+## ⚙️ Features
+
+* Parallel ETL using Python threading
+* Producer-consumer model with thread-safe queues
+* Thread synchronization using `queue.join()`
+* Data transformation and validation
+* SQLite database integration for persistent storage
+* Performance benchmarking with visualization
+
+---
+
+## 🏗️ Architecture
+
+Extract → Transform → Load → Store (SQLite)
+
+---
+
+## 🛠️ Tech Stack
+
+* Python
+* Pandas
+* SQLite
+* Matplotlib
+* Multithreading
+
+---
+
+## ▶️ How to Run
+
+### 1. Install dependencies
+
+pip install pandas matplotlib
+
+### 2. Run the project
+
 python benchmark.py
 
-## Output
-- result.csv (processed data)
-- performance.png (graph)
+---
 
-## Concept
-Parallel processing improves speed up to an optimal number of threads.
+## 📁 Output
 
-# etl-multithreaded
-Built a multi-threaded ETL pipeline in Python using producer-consumer architecture and queues; optimized data processing performance through parallel execution and benchmarked scalability across multiple thread configurations.
- 2d4fb7954f3d633fabc5c971a716f378b0257ed6
+* `output/result.csv` → Processed data
+* `database/etl.db` → SQLite database (generated at runtime)
+* `output/performance.png` → Performance graph
+
+---
+
+## 🧠 Key Concepts Demonstrated
+
+* Multithreading and concurrency
+* Producer-consumer architecture
+* Thread synchronization using queues
+* ETL pipeline design
+* Data validation and preprocessing
+* Performance benchmarking
+
+---
+
+## 📊 Performance Insight
+
+Execution time decreases with increasing threads up to an optimal limit, after which thread overhead reduces efficiency.
+
+---
+
+## ⚠️ Note
+
+The `database/` and `output/` folders are excluded from version control using `.gitignore` since they contain generated files.
+
+---
+
+## 🚀 Future Improvements
+
+* Integrate PostgreSQL or other databases
+* Add real-time data streaming
+* Implement logging and error handling
+* Build a visualization dashboard
+
+---
+
+## 👩‍💻 Author
+
+GitHub: https://github.com/swirathore1903-code
